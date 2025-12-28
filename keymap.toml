@@ -1,0 +1,96 @@
+#
+### dupes
+#
+
+[[manager.prepend_keymap]]
+on = ["<A-J>", "i"]
+run = "plugin dupes interactive"
+desc = "Run dupes interactive"
+
+[[manager.prepend_keymap]]
+on = ["<A-J>", "o"]
+run = "plugin dupes override"
+desc = "Run dupes override"
+
+[[manager.prepend_keymap]]
+on = ["<A-J>", "d"]
+run = "plugin dupes dry"
+desc = "Run dupes dry"
+
+[[manager.prepend_keymap]]
+on = ["<A-J>", "a"]
+run = "plugin dupes apply"
+desc = "Run dupes apply"
+
+# [[mgr.prepend_keymap]]
+# on = ["<A-J>", "c"]
+# run = "plugin dupes custom"
+# desc = "Run dupes custom"
+
+#
+### git
+#
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"  # use `url` if you're using the nightly version of Yazi
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"  # use `url` if you're using the nightly version of Yazi
+run  = "git"
+
+#
+### lazygit
+#
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "i" ]
+run  = "plugin lazygit"
+desc = "run lazygit"
+
+#
+### toggle-pane
+#
+
+# keymap.toml
+[[mgr.prepend_keymap]]
+on   = "T"
+run  = "plugin toggle-pane min-preview"
+desc = "Show or hide the preview pane"
+
+# keymap.toml
+[[mgr.prepend_keymap]]
+on   = "T"
+run  = "plugin toggle-pane max-preview"
+desc = "Maximize or restore the preview pane"
+
+#
+### recycle-bin
+#
+
+[mgr]
+prepend_keymap = [
+  { on = ["R","b"], run = "plugin recycle-bin",              desc = "Open Recycle Bin menu" },
+]
+
+#
+### restore
+#
+
+[mgr]
+  prepend_keymap = [
+    { on = ["d", "u"], run = "plugin restore", desc = "Restore last deleted files/folders" },
+
+    # Select files/folders to restore. Input item index or range separated by comma:
+    # - Restore a trashed file:
+    #      What file to restore [0..4]: 4
+    # - Restore multiple trashed files separated by comma, also support range:
+    #      What file to restore [0..3]: 0-2, 3
+
+    # This will throw error when there is existed file/folder
+    { on = [ "d", "U" ], run = "plugin restore -- --interactive", desc = "Restore deleted files/folders (Interactive)" },
+    # Or auto overwrite existed file/folder
+    { on = [ "d", "O"], run = "plugin restore -- --interactive --interactive-overwrite", desc = "Restore deleted files/folders (Interactive overwrite)" },
+  ]
