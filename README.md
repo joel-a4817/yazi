@@ -1,0 +1,2 @@
+# yazi
+custom yazi configuration.
