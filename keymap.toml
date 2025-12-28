@@ -70,18 +70,19 @@ desc = "Maximize or restore the preview pane"
 ### recycle-bin
 #
 
-[mgr]
-prepend_keymap = [
-  { on = ["R","b"], run = "plugin recycle-bin",              desc = "Open Recycle Bin menu" },
-]
+[[mgr.prepend_keymap]]
+on = ["R","b"]
+run = "plugin recycle-bin"
+desc = "Open Recycle Bin menu"
 
 #
 ### restore
 #
 
-[mgr]
-  prepend_keymap = [
-    { on = ["d", "u"], run = "plugin restore", desc = "Restore last deleted files/folders" },
+[[mgr.prepend_keymap]]
+on = ["d", "u"]
+run = "plugin restore"
+desc = "Restore last deleted files/folders"
 
     # Select files/folders to restore. Input item index or range separated by comma:
     # - Restore a trashed file:
@@ -90,7 +91,12 @@ prepend_keymap = [
     #      What file to restore [0..3]: 0-2, 3
 
     # This will throw error when there is existed file/folder
-    { on = [ "d", "U" ], run = "plugin restore -- --interactive", desc = "Restore deleted files/folders (Interactive)" },
+[[mgr.prepend_keymap]]
+on = [ "d", "U" ]
+run = "plugin restore -- --interactive"
+desc = "Restore deleted files/folders (Interactive)"
     # Or auto overwrite existed file/folder
-    { on = [ "d", "O"], run = "plugin restore -- --interactive --interactive-overwrite", desc = "Restore deleted files/folders (Interactive overwrite)" },
-  ]
+[[mgr.prepend_keymap]]
+on = [ "d", "O"]
+run = "plugin restore -- --interactive --interactive-overwrite"
+desc = "Restore deleted files/folders (Interactive overwrite)"

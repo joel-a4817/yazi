@@ -1,6 +1,6 @@
-#
-### dupes
-#
+
+-- dupes
+
 
 require("dupes"):setup {
 	-- Global settings
@@ -24,14 +24,14 @@ require("dupes"):setup {
 	},
 }
 
-#
-## git
-#
+
+-- git
+
 
 require("git"):setup()
 
-#
-### recycle-bin
-#
+
+-- recycle-bin
+
 
 require("recycle-bin"):setup()
