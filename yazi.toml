@@ -7,3 +7,6 @@ run = "git"
 id  = "git"
 url = "*/"
 run = "git"
+
+[mgr]
+linemode = "size"
