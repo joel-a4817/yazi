@@ -1,47 +1,4 @@
 #
-### dupes
-#
-
-[[manager.prepend_keymap]]
-on = ["<A-J>", "i"]
-run = "plugin dupes interactive"
-desc = "Run dupes interactive"
-
-[[manager.prepend_keymap]]
-on = ["<A-J>", "o"]
-run = "plugin dupes override"
-desc = "Run dupes override"
-
-[[manager.prepend_keymap]]
-on = ["<A-J>", "d"]
-run = "plugin dupes dry"
-desc = "Run dupes dry"
-
-[[manager.prepend_keymap]]
-on = ["<A-J>", "a"]
-run = "plugin dupes apply"
-desc = "Run dupes apply"
-
-# [[mgr.prepend_keymap]]
-# on = ["<A-J>", "c"]
-# run = "plugin dupes custom"
-# desc = "Run dupes custom"
-
-#
-### git
-#
-
-[[plugin.prepend_fetchers]]
-id   = "git"
-name = "*"  # use `url` if you're using the nightly version of Yazi
-run  = "git"
-
-[[plugin.prepend_fetchers]]
-id   = "git"
-name = "*/"  # use `url` if you're using the nightly version of Yazi
-run  = "git"
-
-#
 ### lazygit
 #
 
