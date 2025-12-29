@@ -51,27 +51,11 @@ run  = "plugin lazygit"
 desc = "run lazygit"
 
 #
-### toggle-pane
-#
-
-# keymap.toml
-[[mgr.prepend_keymap]]
-on   = "T"
-run  = "plugin toggle-pane min-preview"
-desc = "Show or hide the preview pane"
-
-# keymap.toml
-[[mgr.prepend_keymap]]
-on   = "T"
-run  = "plugin toggle-pane max-preview"
-desc = "Maximize or restore the preview pane"
-
-#
 ### recycle-bin
 #
 
 [[mgr.prepend_keymap]]
-on = ["R","b"]
+on = ["R"]
 run = "plugin recycle-bin"
 desc = "Open Recycle Bin menu"
 
