@@ -12,7 +12,7 @@ desc = "run lazygit"
 #
 
 [[mgr.prepend_keymap]]
-on = ["R"]
+on = ["T"]
 run = "plugin recycle-bin"
 desc = "Open Recycle Bin menu"
 
@@ -21,9 +21,9 @@ desc = "Open Recycle Bin menu"
 #
 
 [[mgr.prepend_keymap]]
-on = ["d", "u"]
+on = ["R", "u"]
 run = "plugin restore"
-desc = "Restore last deleted files/folders"
+desc = "Restore last deleted"
 
     # Select files/folders to restore. Input item index or range separated by comma:
     # - Restore a trashed file:
@@ -33,11 +33,11 @@ desc = "Restore last deleted files/folders"
 
     # This will throw error when there is existed file/folder
 [[mgr.prepend_keymap]]
-on = [ "d", "U" ]
+on = [ "R", "U" ]
 run = "plugin restore -- --interactive"
-desc = "Restore deleted files/folders (Interactive)"
+desc = "Restore (Interactive)"
     # Or auto overwrite existed file/folder
 [[mgr.prepend_keymap]]
-on = [ "d", "O"]
+on = [ "R", "O"]
 run = "plugin restore -- --interactive --interactive-overwrite"
-desc = "Restore deleted files/folders (Interactive overwrite)"
+desc = "Restore (Interactive overwrite)"
