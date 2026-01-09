@@ -1,9 +1,3 @@
--- git
-
-
-require("git"):setup()
-
-
 -- recycle-bin
 
 
