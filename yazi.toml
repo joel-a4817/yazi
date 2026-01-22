@@ -1,2 +1,21 @@
 [mgr]
 linemode = "size"
+
+
+[opener]
+qutebrowser_pdf = [
+  { run = 'qutebrowser "$@"', desc = "qutebrowser", orphan = true }
+]
+zathura_pdf = [
+  { run = 'zathura "$@"', desc = "zathura", orphan = true }
+]
+system_default = [
+  { run = 'xdg-open "$1"', desc = "System default", for = "linux" }
+]
+
+[open]
+rules = [
+  { mime = "application/pdf", use = [ "qutebrowser_pdf", "zathura_pdf", "system_default" ] },
+  { name = "*", use = [ "system_default" ] }
+]
+
