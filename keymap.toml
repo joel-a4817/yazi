@@ -18,13 +18,13 @@ desc = "Open hovered in zathura"
 
 # n = edit in nvim (blocking)
 [[mgr.prepend_keymap]]
-on   = "n"
+on   = "v"
 run  = "shell --block -- nvim \"%h\""
 desc = "Edit hovered in Neovim"
 
 # N = nvim in a NEW foot window (not floating, just new window)
 [[mgr.prepend_keymap]]
-on   = "N"
+on   = "V"
 run  = "shell --orphan -- foot -T nvim nvim \"%h\""
 desc = "Open hovered in Neovim (new foot window)"
 
