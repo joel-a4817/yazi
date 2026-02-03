@@ -12,7 +12,7 @@ desc = "Open hovered in librewolf"
 
 # p = open in zathura
 [[mgr.prepend_keymap]]
-on   = "p"
+on   = "z"
 run  = "shell --orphan -- zathura \"%h\""
 desc = "Open hovered in zathura"
 
