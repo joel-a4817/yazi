@@ -6,7 +6,7 @@ desc = "Open hovered in qutebrowser"
 
 # l = open in librewolf
 [[mgr.prepend_keymap]]
-on   = "l"
+on   = "o"
 run  = "shell --orphan -- libreoffice \"%h\""
 desc = "Open hovered in librewolf"
 
