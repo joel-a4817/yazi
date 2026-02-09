@@ -1,32 +1,26 @@
 # o = open in qutebrowser
 [[mgr.prepend_keymap]]
-on   = "b"
-run  = "shell --orphan -- qutebrowser \"%h\""
-desc = "Open hovered in qutebrowser"
+on   = ["o", "q"]
+run  = "shell --orphan -- qutebrowser %*"
+desc = "Open Qutebrowser"
 
 # l = open in librewolf
 [[mgr.prepend_keymap]]
-on   = "o"
-run  = "shell --orphan -- libreoffice \"%h\""
-desc = "Open hovered in librewolf"
+on   = ["o", "l"]
+run  = "shell --orphan -- libreoffice %*"
+desc = "Open Librewolf"
 
 # p = open in zathura
 [[mgr.prepend_keymap]]
-on   = "z"
-run  = "shell --orphan -- zathura \"%h\""
-desc = "Open hovered in zathura"
-
-# n = edit in nvim (blocking)
-[[mgr.prepend_keymap]]
-on   = "v"
-run  = "shell --block -- nvim \"%h\""
-desc = "Edit hovered in Neovim"
+on   = ["o", "z"]
+run  = "shell --orphan -- zathura %*"
+desc = "Open Zathura"
 
 # N = nvim in a NEW foot window (not floating, just new window)
 [[mgr.prepend_keymap]]
-on   = "V"
-run  = "shell --orphan -- foot -T nvim nvim \"%h\""
-desc = "Open hovered in Neovim (new foot window)"
+on   = ["o", "n"]
+run  = "shell --orphan -- foot -T nvim nvim %*"
+desc = "Open Neovim"
 
 
 #
