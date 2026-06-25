@@ -1,8 +1,8 @@
 # o = open in qutebrowser
 [[mgr.prepend_keymap]]
-on   = ["o", "q"]
-run  = "shell --orphan -- qutebrowser %*"
-desc = "Open Qutebrowser"
+on   = ["o", "g"]
+run  = "shell --orphan -- glide %*"
+desc = "Open Glide"
 
 # l = open in librewolf
 [[mgr.prepend_keymap]]
