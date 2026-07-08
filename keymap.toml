@@ -10,12 +10,6 @@ on   = ["o", "l"]
 run  = "shell --orphan -- libreoffice %*"
 desc = "Open Librewolf"
 
-# p = open in zathura
-[[mgr.prepend_keymap]]
-on   = ["o", "z"]
-run  = "shell --orphan -- zathura %*"
-desc = "Open Zathura"
-
 # N = nvim in a NEW foot window (not floating, just new window)
 [[mgr.prepend_keymap]]
 on   = ["o", "n"]
