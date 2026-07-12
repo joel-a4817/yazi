@@ -1,19 +1,19 @@
 # o = open in qutebrowser
 [[mgr.prepend_keymap]]
 on   = ["o", "g"]
-run  = "shell --orphan -- glide %*"
+run  = "shell --orphan -- glide %h"
 desc = "Open Glide"
 
 # l = open in librewolf
 [[mgr.prepend_keymap]]
 on   = ["o", "l"]
-run  = "shell --orphan -- libreoffice %*"
+run  = "shell --orphan -- libreoffice %h"
 desc = "Open Librewolf"
 
 # N = nvim in a NEW foot window (not floating, just new window)
 [[mgr.prepend_keymap]]
 on   = ["o", "n"]
-run  = "shell --orphan -- foot -T nvim nvim %*"
+run  = "shell --orphan -- foot -T nvim -e nvim %h"
 desc = "Open Neovim"
 
 
