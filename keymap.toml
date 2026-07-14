@@ -1,14 +1,14 @@
-# o = open in qutebrowser
+# o = open in glide
 [[mgr.prepend_keymap]]
 on   = ["o", "g"]
 run  = "shell --orphan -- glide %h"
 desc = "Open Glide"
 
-# l = open in librewolf
+# l = open in codt-qt
 [[mgr.prepend_keymap]]
 on   = ["o", "l"]
-run  = "shell --orphan -- libreoffice %h"
-desc = "Open Librewolf"
+run  = "shell --orphan -- coda-qt %h"
+desc = "Open Collabora Office"
 
 # N = nvim in a NEW foot window (not floating, just new window)
 [[mgr.prepend_keymap]]
