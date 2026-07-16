@@ -1,21 +1,17 @@
-# o = open in glide
 [[mgr.prepend_keymap]]
-on   = ["o", "g"]
-run  = "shell --orphan -- glide %h"
-desc = "Open Glide"
+on   = ["o", "c"]
+run  = "shell --orphan -- chromium %h"
+desc = "Open Chromium"
 
-# l = open in codt-qt
 [[mgr.prepend_keymap]]
 on   = ["o", "l"]
 run  = "shell --orphan -- coda-qt %h"
 desc = "Open Collabora Office"
 
-# N = nvim in a NEW foot window (not floating, just new window)
 [[mgr.prepend_keymap]]
 on   = ["o", "n"]
-run  = "shell --orphan -- foot -T nvim -e nvim %h"
+run  = "shell --orphan -- foot -T nvim -e nvim %h" #new window
 desc = "Open Neovim"
-
 
 #
 ### sudo
