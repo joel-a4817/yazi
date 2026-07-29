@@ -1,0 +1,8 @@
+[icon]
+prepend_dirs = [
+  { name = "nixos",   text = "" },
+  { name = "iPhone4817", text = "" },
+  { name = "media", text = "" },
+  { name = "kindle", text = "󰄜" },
+  { name = "books", text = "󱉟" },
+]
