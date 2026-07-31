@@ -4,5 +4,4 @@ prepend_dirs = [
   { name = "iPhone4817", text = "", fg = "#ffffff" },
   { name = "media", text = "" },
   { name = "kindle", text = "󰄜", fg = "#808080" },
-  { name = "school", text = "" },
 ]
