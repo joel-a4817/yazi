@@ -1,21 +1,35 @@
 [[mgr.prepend_keymap]]
 on   = ["o", "c"]
 run  = "shell --orphan -- chromium %h"
-desc = "Open Chromium"
+desc = "open chromium"
 
 [[mgr.prepend_keymap]]
 on   = ["o", "l"]
 run  = "shell --orphan -- coda-qt %h"
-desc = "Open Collabora Office"
+desc = "open collabora office"
 
 [[mgr.prepend_keymap]]
 on   = ["o", "n"]
+run  = "shell --block -- nvim %h"
+desc = "open nvim"
+
+[[mgr.prepend_keymap]]
+on   = ["o", "N"]
 run  = "shell --orphan -- foot -T nvim -e nvim %h" #new window
-desc = "Open Neovim"
+desc = "open nvim"
 
 #
 ### sudo
 #
+[[mgr.prepend_keymap]]
+on   = ["R", "n"]
+run  = "shell --block -- sudo -E nvim %h"
+desc = "open Neovim"
+[[mgr.prepend_keymap]]
+on   = ["R", "N"]
+run  = "shell --orphan -- foot -T nvim -e sudo -E nvim %h" #new window
+desc = "open nvim new window"
+
 [[mgr.prepend_keymap]]
 on = ["R", "p", "p"]
 run = "plugin sudo -- paste"
