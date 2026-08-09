@@ -1,7 +1,7 @@
 [icon]
 prepend_dirs = [
   { name = "nixos",   text = "", fg = "#7ebae4"},
-  { name = "iPhone4817", text = "", fg = "#ffffff" },
+  { name = "apple", text = "", fg = "#ffffff" },
   { name = "media", text = "" },
   { name = "kindle", text = "󰄜", fg = "#808080" },
 ]
