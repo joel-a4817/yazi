@@ -1,4 +1,9 @@
 [[mgr.prepend_keymap]]
+on   = [ "<C-d>" ]
+run  = "plugin drag"
+desc = "Drag Files"
+
+[[mgr.prepend_keymap]]
 on   = ["o", "g"]
 run  = "shell --orphan -- glide %h"
 desc = "open glide"
