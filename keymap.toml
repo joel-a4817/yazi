@@ -6,22 +6,32 @@ desc = "Drag Files"
 [[mgr.prepend_keymap]]
 on   = ["o", "g"]
 run  = "shell --orphan -- glide %h"
-desc = "open glide"
+desc = "glide"
+
+[[mgr.prepend_keymap]]
+on   = ["o", "m"]
+run  = "shell --orphan -- mpv %h"
+desc = "mpv"
+
+[[mgr.prepend_keymap]]
+on   = ["o", "s"]
+run  = "shell --orphan -- mpv --shuffle %h"
+desc = "shuffle mpv"
 
 [[mgr.prepend_keymap]]
 on   = ["o", "l"]
 run  = "shell --orphan -- coda-qt %h"
-desc = "open collabora office"
+desc = "office"
 
 [[mgr.prepend_keymap]]
 on   = ["o", "n"]
 run  = "shell --block -- nvim %h"
-desc = "open nvim"
+desc = "nvim"
 
 [[mgr.prepend_keymap]]
 on   = ["o", "N"]
 run  = "shell --orphan -- foot -T nvim -e nvim %h" #new window
-desc = "open nvim"
+desc = "nvim new"
 
 #
 ### sudo
