@@ -14,9 +14,19 @@ run  = "shell --orphan -- mpv %h"
 desc = "mpv"
 
 [[mgr.prepend_keymap]]
+on   = ["o", "M"]
+run  = "shell --orphan -- mpv --ao=pipewire --audio-device=pipewire/camilladsp %h"
+desc = "mpv C"
+
+[[mgr.prepend_keymap]]
 on   = ["o", "s"]
 run  = "shell --orphan -- mpv --shuffle %h"
 desc = "shuffle mpv"
+
+[[mgr.prepend_keymap]]
+on   = ["o", "S"]
+run  = "shell --orphan -- mpv --shuffle --ao=pipewire --audio-device=pipewire/camilladsp %h"
+desc = "shuffle mpv C"
 
 [[mgr.prepend_keymap]]
 on   = ["o", "l"]
