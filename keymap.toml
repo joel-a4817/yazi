@@ -9,6 +9,11 @@ run  = "shell --orphan -- glide %h"
 desc = "glide"
 
 [[mgr.prepend_keymap]]
+on   = ["o", "i"]
+run  = "shell --orphan -- imv %h"
+desc = "imv"
+
+[[mgr.prepend_keymap]]
 on   = ["o", "m"]
 run  = "shell --orphan -- mpv %h"
 desc = "mpv"
