@@ -48,7 +48,7 @@ run = '''shell --orphan -- 'set -- %h; [ -f "$1" ] || exit; ext=$(printf "%%s" "
   pcraft|psd|psb|png|jpg|jpeg|tif|tiff|webp|gif|bmp|tga|ico|qoi|pnm|ppm|pgm|pbm|exr|hdr|avif) app=photocraft ;;
   *) exit 0 ;;
 esac; exec "$app" "$1"'''
-desc = "Open in matching ArtCraft app"
+desc = "artcraft"
 
 [[mgr.prepend_keymap]]
 on   = ["o", "n"]
