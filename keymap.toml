@@ -35,29 +35,29 @@ desc = "shuffle mpv C"
 
 [[mgr.prepend_keymap]]
 on = ["o", "a"]
-run = '''shell --orphan -- 'set -- %h
-[ -f "$1" ] || exit 0
+run = '''shell --orphan -- 'file=%h
+[ -f "$file" ] || exit 1
 
-file=$1
 mime=$(xdg-mime query filetype "$file") || exit 1
 
-for desktop in /run/current-system/sw/share/applications/*craft.desktop "$HOME"/.nix-profile/share/applications/*craft.desktop "$HOME"/.local/share/applications/*craft.desktop; do
-  [ -f "$desktop" ] || continue
-
-  case "$(basename "$desktop")" in
-    *craft.desktop) ;;
-    *) continue ;;
-  esac
-
-  if grep -qiE "^MimeType=.*${mime//\//\\/}" "$desktop"; then
-    app=$(basename "$desktop" .desktop)
-    command -v "$app" >/dev/null 2>&1 || continue
-    exec "$app" "$file"
-  fi
+gio mime "$mime" |
+sed -n "s/^[[:space:]]*//; /[Aa]rt[Cc]raft.*\.desktop/p; /[Cc]raft.*\.desktop/p" |
+grep -oE "[^[:space:]]+\.desktop" |
+awk "!seen[\$0]++" |
+while IFS= read -r desktop_id; do
+  for dir in \
+    "$HOME/.local/share/applications" \
+    "$HOME/.nix-profile/share/applications" \
+    /run/current-system/sw/share/applications
+  do
+    desktop="$dir/$desktop_id"
+    [ -f "$desktop" ] || continue
+    exec gio launch "$desktop" "$file"
+  done
 done
 
-exit 0'''
-desc = "Open in matching ArtCraft app"
+exit 1'''
+desc = "artcraft"
 
 [[mgr.prepend_keymap]]
 on   = ["o", "n"]
