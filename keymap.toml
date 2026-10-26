@@ -1,3 +1,68 @@
+# CADCraft
+[[mgr.prepend_keymap]]
+on = ["o", "a", "c"]
+run = '''shell --orphan -- cadcraft "%h"'''
+desc = "Open with CADCraft"
+
+# DeckCraft
+[[mgr.prepend_keymap]]
+on = ["o", "a", "k"]
+run = '''shell --orphan -- deckcraft "%h"'''
+desc = "Open with DeckCraft"
+
+# DesignCraft
+[[mgr.prepend_keymap]]
+on = ["o", "a", "d"]
+run = '''shell --orphan -- designcraft "%h"'''
+desc = "Open with DesignCraft"
+
+# EffectCraft
+[[mgr.prepend_keymap]]
+on = ["o", "a", "e"]
+run = '''shell --orphan -- effectcraft "%h"'''
+desc = "Open with EffectCraft"
+
+# FilmCraft
+[[mgr.prepend_keymap]]
+on = ["o", "a", "f"]
+run = '''shell --orphan -- filmcraft "%h"'''
+desc = "Open with FilmCraft"
+
+# GridCraft
+[[mgr.prepend_keymap]]
+on = ["o", "a", "g"]
+run = '''shell --orphan -- gridcraft "%h"'''
+desc = "Open with GridCraft"
+
+# LightCraft
+[[mgr.prepend_keymap]]
+on = ["o", "a", "l"]
+run = '''shell --orphan -- lightcraft "%h"'''
+desc = "Open with LightCraft"
+
+# PhotoCraft
+[[mgr.prepend_keymap]]
+on = ["o", "a", "p"]
+run = '''shell --orphan -- photocraft "%h"'''
+desc = "Open with PhotoCraft"
+
+# SoundCraft
+[[mgr.prepend_keymap]]
+on = ["o", "a", "s"]
+run = '''shell --orphan -- soundcraft "%h"'''
+desc = "Open with SoundCraft"
+# VectorCraft
+[[mgr.prepend_keymap]]
+on = ["o", "a", "v"]
+run = '''shell --orphan -- vectorcraft "%h"'''
+desc = "Open with VectorCraft"
+
+# WordCraft
+[[mgr.prepend_keymap]]
+on = ["o", "a", "w"]
+run = '''shell --orphan -- wordcraft "%h"'''
+desc = "Open with WordCraft"
+
 [[mgr.prepend_keymap]]
 on   = [ "<C-d>" ]
 run  = "plugin drag"
@@ -32,32 +97,6 @@ desc = "shuffle mpv"
 on   = ["o", "S"]
 run  = "shell --orphan -- mpv --shuffle --ao=pipewire --audio-device=pipewire/camilladsp %h"
 desc = "shuffle mpv C"
-
-[[mgr.prepend_keymap]]
-on = ["o", "a"]
-run = '''shell --orphan -- 'file=%h
-[ -f "$file" ] || exit 1
-
-mime=$(xdg-mime query filetype "$file") || exit 1
-
-gio mime "$mime" |
-sed -n "s/^[[:space:]]*//; /[Aa]rt[Cc]raft.*\.desktop/p; /[Cc]raft.*\.desktop/p" |
-grep -oE "[^[:space:]]+\.desktop" |
-awk "!seen[\$0]++" |
-while IFS= read -r desktop_id; do
-  for dir in \
-    "$HOME/.local/share/applications" \
-    "$HOME/.nix-profile/share/applications" \
-    /run/current-system/sw/share/applications
-  do
-    desktop="$dir/$desktop_id"
-    [ -f "$desktop" ] || continue
-    exec gio launch "$desktop" "$file"
-  done
-done
-
-exit 1'''
-desc = "artcraft"
 
 [[mgr.prepend_keymap]]
 on   = ["o", "n"]
